@@ -1,0 +1,198 @@
+<html>
+<head>    
+	<meta name="viewport" content="interactive-widget=resizes-content" />
+</head>
+	<body>  
+		<div style="background-color:#f1f2f3 !important;">
+		
+			<div style="max-width:640px;text-align:center; margin:0 auto;">	
+				<div style="background-color:white !important;">
+					<div style="vertical-align: top">
+						<img id="imglogo" style="border:0;width:100%;max-height:190px;object-fit:cover;display: block;" width="640" src="cid:imglogo">
+					</div>
+					<br>
+					<h2 style="font-weight: bold;font-size: 1.5625rem !important; ">¡Tu pedido esta listo!</h2>
+					
+					<div style="border-bottom: 2px solid #f1f2f3 !important; border-top: 2px solid #f1f2f3 !important;padding:1rem !important;">
+						<p style="font-weight: bold;  font-size: 1.2rem !important; margin: 0 auto !important;" id="nombre">{$pnombre}</p>
+						<p style="margin: 0 auto !important;font-size: 1.0rem !important;">Tu pedido ya esta disponible en tienda para que puedas pasar a recogerlo,</p>
+						<p style="margin: 0 auto !important;font-size: 1.0rem !important;" >¡Te esperamos!</p>
+					</div>
+					
+					<div style="background-color:white !important;padding-right:2rem !important;padding-left:2rem !important;padding-bottom:2rem !important;">
+						<table style="width:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+							<tr>
+								<td>
+									<table style="width:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+										<colgroup>
+											<col style="width: 45%;" />
+											<col />
+											<col style="width: 45%;" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<td style="text-align: left;" colspan="3">
+													<p style=" font-weight: bold;  font-size: 0.8rem !important;">DATOS PARA LA ENTREGA</p>
+												</td>
+											</tr>
+											<tr>
+												<td style="vertical-align: top;text-align: left;">
+													<p style="vertical-align: top;font-weight: bold;  font-size: 0.8rem !important; margin: 0 auto !important;">Pedido</p>
+													<p style="vertical-align: top;margin: 0 auto !important;font-size: 0.8rem !important;" id="porden">{$porden}</p>
+												</td>
+												<td></td>
+												<td style="vertical-align: top;text-align: left;">
+													<p style="vertical-align: top; font-weight: bold;  font-size: 0.8rem !important; margin: 0 auto !important;">Tienda</p>
+													<p style="vertical-align: top;margin: 0 auto !important;font-size: 0.8rem !important;" id="pdireccion1">{$pdireccion1}</p>
+													<p style="vertical-align: top;margin: 0 auto !important;font-size: 0.8rem !important;" id="pdireccion2">{$pdireccion2}</p>
+													<p style="vertical-align: top;margin: 0 auto !important;font-size: 0.8rem !important;" id="pdireccion3">{$pdireccion3}</p>
+													<p style="vertical-align: top;margin: 0 auto !important;font-size: 0.8rem !important;" id="pdireccion4">{$pdireccion4}</p>
+													<p style="vertical-align: top;margin: 0 auto !important;font-size: 0.8rem !important;" id="pdireccion5">{$pdireccion5}</p>
+												</td>
+											</tr>
+											<tr>
+												<td style="vertical-align: top;text-align: left;" colspan="3">
+													<p style="vertical-align: top; font-weight: bold;  font-size: 0.8rem !important; margin: 0 auto !important;">Entregar a</p>
+													<p style="vertical-align: top;margin: 0 auto !important;font-size: 0.8rem !important;" id="pentregar">{$pentregar}</p>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3">
+													<br>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" style="text-align: left;">
+													<p style=" margin: 0 auto !important;text-align: justify !important;font-size: 0.8rem !important;">Si otra persona recogerá tú pedido, envía un correo a 
+													<a href="mailto:atencionalcliente@ilariainternational.com?Subject=Ilaria%20-%20Recojo%20en%20Tienda%20-%20Pedido%20{$pnumid}">atencionalcliente@ilariainternational.com</a> con el número de pedido, nombre y documento de identidad de la persona autorizada.</p>
+												</td>
+											</tr>										
+											<tr>
+												<td colspan="3">
+													<p style=" margin: 0 auto !important; text-align: justify !important;font-size: 0.8rem !important;">Recuerda que la persona que recoja el pedido deberá presentar su documento de identidad.</p>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3">
+													<br>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" style="text-align: left;">										
+													<p style=" font-weight: bold;  font-size: 0.8rem !important;margin:0 auto!important">DETALLE DEL RECOJO</p>	
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3">
+													<p style="margin:0 auto !important;text-align: justify !important;font-size: 0.8rem !important;" id="padditionalinfo">{$padditionalinfo}</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								<td>
+							</tr>
+							<tr>
+								<td>
+									<br>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table style="width:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+										<tbody style='border: 1px solid #979595;'>
+											<tr>
+												<td style='vertical-align:top'>
+													<table style="width:100%;border: 0.2px solid #979595;border-radius: 10px;">
+														<colgroup>
+															<col style="width: 35%;" />
+															<col style="width: 65%;" />
+														</colgroup>
+														<tbody style='border: 0.2px solid #979595;'>
+															<tr>
+																<td colspan="2"  style="text-align:center;">
+																	<p style=" font-weight: bold;  font-size: 0.8rem !important; margin: 0 auto !important;">PRODUCTOS</p>
+																</td>
+															</tr>
+															{tbody}
+														</tbody>
+													</table>
+													<br>
+													<table style='padding:1rem !important;border: 0.2px solid #979595;border-radius: 10px;'>
+														<colgroup>
+															<col style="width: 50%;" />
+															<col style="width: 50%;" />
+														</colgroup>
+														<tbody>
+															<tr>
+																<td colspan="2" style="text-align:center;">
+																	<p style=" font-weight: bold;  font-size: 0.8rem !important; margin: 0 auto !important;">RESUMEN</p>
+																</td>
+															</tr>
+															<tr>
+																<td colspan='2'>
+																	<hr style='border: 0.2px solid #979595;'>
+																</td>
+															</tr>
+															<tr style='border: 1px solid #979595;'>
+																<td style="text-align:left">
+																	<p style=" margin: 0 auto !important;font-size: 0.8rem !important;">Productos:</p>
+																</td>
+																<td style="text-align:right">
+																	<label id="productsamount" style='font-size: 0.8rem !important;'>{$productsamount}</label>
+																</td>
+															</tr>
+
+															<tr style='border: 1px solid #979595;'>
+																<td style="text-align:left">
+																	<p style="color:red; margin: 0 auto !important;font-size: 0.8rem !important;">Descuentos:</p>
+																</td>
+																<td style="text-align:right">
+																	<label id="productsamount" style='color:red;  font-size: 0.8rem !important;'>{$discountsamount}</label>
+																</td>
+															</tr>
+															<tr>
+																<td colspan='2'>
+																	<hr style='border: 0.5px solid #979595;'>
+																</td>
+															</tr>
+															<tr style='border: 1px solid #979595;'>
+																<td style="text-align:left">
+																	<p style=" font-weight: bold; margin: 0 auto !important;font-size: 0.8rem !important;" id="pentregar">Total:</p>
+																</td>
+																<td style="text-align:right">
+																	<label id="productsamount" style='font-weight: bold;font-size: 0.8rem !important;'>{$totalamount}</label>
+																</td>
+															</tr>
+															<tr>
+																<td colspan='2'>
+																	<hr style='border: 0.5px solid #979595;'>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+													
+												</td>
+											<tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<br>
+									<br>
+								</td>
+							</tr>
+							<tr>
+								<td <td style="vertical-align: top;text-align: left;">
+									<p style=" margin: 0 auto !important;">Agradecemos su preferencia</p>
+									<p style=" font-weight: bold;  font-size: 0.8rem !important; margin: 0 auto !important;">ILARIA</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

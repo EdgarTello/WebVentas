@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="Operacion.ashx.cs" Class="TwoTecnology.WebVentas.Formulario.MesaPartes.JefaturaDocumentos.Operacion1" %>

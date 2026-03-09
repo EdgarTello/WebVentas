@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://rpe-rdocument.com:8080/ServicioDocumentos/Documento.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TwoTecnology.ServicioDocumentos" />
+  <xs:element name="EnvioDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Correlativo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnvioDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EnvioDocumentoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstadoDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Correlativo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstadoDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TwoTecnology.ServicioDocumentos" minOccurs="0" name="EstadoDocumentoResult" nillable="true" type="q1:RespuestaDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPdf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Correlativo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPdfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerPdfResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Correlativo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerXmlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerZip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Correlativo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerZipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerZipResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsObtenerImpresion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Impresora" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsObtenerImpresionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsObtenerImpresionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerImpresion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Impresora" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerImpresionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TwoTecnology.ServicioDocumentos" minOccurs="0" name="ObtenerImpresionResult" nillable="true" type="q2:ImpresionDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerImpresionByCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerImpresionByCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TwoTecnology.ServicioDocumentos" minOccurs="0" name="ObtenerImpresionByCodigoResult" nillable="true" type="q3:ImpresionDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarImpresion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarImpresionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

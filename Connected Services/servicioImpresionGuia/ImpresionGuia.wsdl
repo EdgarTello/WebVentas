@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ImpresionGuia" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:65333/ImpresionGuia.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:65333/ImpresionGuia.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:65333/ImpresionGuia.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServicioImpresion" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocumentoGuia_EstadoDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoGuia_EstadoDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoGuia_Existe_InputMessage">
+    <wsdl:part name="parameters" element="tns:Existe" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoGuia_Existe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoGuia_Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoGuia_Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoGuia_ObtenerByCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerByCodigo" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoGuia_ObtenerByCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerByCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoGuia_ObtenerTextoByCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTextoByCodigo" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoGuia_ObtenerTextoByCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTextoByCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoGuia_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoGuia_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDocumentoGuia">
+    <wsdl:operation name="EstadoDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoGuia/EstadoDocumento" message="tns:IDocumentoGuia_EstadoDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoGuia/EstadoDocumentoResponse" message="tns:IDocumentoGuia_EstadoDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Existe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoGuia/Existe" message="tns:IDocumentoGuia_Existe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoGuia/ExisteResponse" message="tns:IDocumentoGuia_Existe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoGuia/Obtener" message="tns:IDocumentoGuia_Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoGuia/ObtenerResponse" message="tns:IDocumentoGuia_Obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerByCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoGuia/ObtenerByCodigo" message="tns:IDocumentoGuia_ObtenerByCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoGuia/ObtenerByCodigoResponse" message="tns:IDocumentoGuia_ObtenerByCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTextoByCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoGuia/ObtenerTextoByCodigo" message="tns:IDocumentoGuia_ObtenerTextoByCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoGuia/ObtenerTextoByCodigoResponse" message="tns:IDocumentoGuia_ObtenerTextoByCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoGuia/Actualizar" message="tns:IDocumentoGuia_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoGuia/ActualizarResponse" message="tns:IDocumentoGuia_Actualizar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDocumentoGuia" type="tns:IDocumentoGuia">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EstadoDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoGuia/EstadoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Existe">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoGuia/Existe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoGuia/Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerByCodigo">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoGuia/ObtenerByCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTextoByCodigo">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoGuia/ObtenerTextoByCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoGuia/Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ImpresionGuia">
+    <wsdl:port name="BasicHttpBinding_IDocumentoGuia" binding="tns:BasicHttpBinding_IDocumentoGuia">
+      <soap:address location="http://localhost:65333/ImpresionGuia.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

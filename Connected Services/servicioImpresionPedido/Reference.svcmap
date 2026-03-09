@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="967e2ada-a1fc-466c-b974-127ed4b6eb7e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://rpe-rdocument.com:8080/ServicioImpresion/ImpresionPedido.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ImpresionPedido.xsd" MetadataType="Schema" ID="13e0bf9e-7cd2-4d25-8f1e-35572c8bc639" SourceId="1" SourceUrl="http://rpe-rdocument.com:8080/ServicioImpresion/ImpresionPedido.svc?xsd=xsd0" />
+    <MetadataFile FileName="ImpresionPedido1.xsd" MetadataType="Schema" ID="54b72f38-3d2f-47af-a795-ab8170ddab6d" SourceId="1" SourceUrl="http://rpe-rdocument.com:8080/ServicioImpresion/ImpresionPedido.svc?xsd=xsd2" />
+    <MetadataFile FileName="ImpresionPedido.disco" MetadataType="Disco" ID="b7e82d03-d147-45c0-8242-56867f753630" SourceId="1" SourceUrl="http://rpe-rdocument.com:8080/ServicioImpresion/ImpresionPedido.svc?disco" />
+    <MetadataFile FileName="ImpresionPedido2.xsd" MetadataType="Schema" ID="81688033-d6b7-409e-b1fc-4bc70885690f" SourceId="1" SourceUrl="http://rpe-rdocument.com:8080/ServicioImpresion/ImpresionPedido.svc?xsd=xsd1" />
+    <MetadataFile FileName="ImpresionPedido.wsdl" MetadataType="Wsdl" ID="9a08510c-5d8b-4b34-b38b-6b162deb22f2" SourceId="1" SourceUrl="http://rpe-rdocument.com:8080/ServicioImpresion/ImpresionPedido.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

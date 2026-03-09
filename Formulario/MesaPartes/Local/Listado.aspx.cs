@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TwoTecnology.WebVentas.Formulario.MesaPartes.Local
+{
+    public partial class Listado : System.Web.UI.Page
+    {
+        string urlDefault = "../../../Formulario/MesaPartes/Frame/Salir.aspx";
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!Page.IsPostBack)
+            {
+                if (!Context.User.Identity.IsAuthenticated)
+                    Response.Write("<script>top.location='" + urlDefault + "';parent.location='" + urlDefault + "';</script>");
+                else
+                {
+                    FormsAuthenticationTicket ticket = null;
+
+                    try
+                    {
+                        FormsIdentity formsIdentity = HttpContext.Current.User.Identity as FormsIdentity;
+                        ticket = formsIdentity.Ticket;
+                    }
+                    catch
+                    {
+                        Response.Write("<script>top.location='" + urlDefault + "';parent.location='" + urlDefault + "';</script>");
+                        Response.End();
+                    }
+
+                    string empresaid = ticket.UserData.Split('|')[0];
+                    string ruc = ticket.UserData.Split('|')[1];
+                    string usuario_acceso = ticket.UserData.Split('|')[3];
+                    string usuario_codigo = ticket.UserData.Split('|')[4];
+                    string usuario_nombre = ticket.UserData.Split('|')[5];
+                    string usuario_serie = ticket.UserData.Split('|')[7];
+                    string puntosid = ticket.UserData.Split('|')[8];
+                    string ipcliente = ticket.UserData.Split('|')[9];
+                    string localcodigo = ticket.UserData.Split('|')[10];
+                    string movil = ticket.UserData.Split('|')[11];
+                    string empresatipo = ticket.UserData.Split('|')[12];
+
+                    hruc.Value = ruc;
+                    hidlocal.Value = localcodigo;
+                    hempresatipo.Value = empresatipo;
+                    husuarioacceso.Value = usuario_acceso;
+
+                    ViewState["localcodigo"] = localcodigo;
+                    ViewState["acceso"] = usuario_acceso;
+                    ViewState["empresatipo"] = empresatipo;
+
+                    
+
+                    if (!(usuario_acceso == "Administrador" || usuario_acceso == "SuperAdmin" || usuario_acceso == "Gerencia"))
+                    {
+                        Response.Write("<script>top.location='" + urlDefault + "';parent.location='" + urlDefault + "';</script>");
+                        Response.End();
+                    }
+                }
+            }
+        }
+    }
+}

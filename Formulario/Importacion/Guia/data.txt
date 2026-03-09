@@ -1,0 +1,48 @@
+{
+  "no": "YLR25182",
+  "date": "22/05/2025",
+  "detalle": [
+    {
+      "marks": "BOM5009",
+      "description": "TOOL KITS (SET)",
+      "quantity": 320,
+      "ctn": 16
+    },
+    {
+      "marks": "BOM5029",
+      "description": "TOOL KITS (SET)",
+      "quantity": 300,
+      "ctn": 30
+    },
+    {
+      "marks": "BOM5042",
+      "description": "FLAP DISC (PIECES)",
+      "quantity": 12000,
+      "ctn": 60
+    },
+    {
+      "marks": "BOM5044",
+      "description": "FLAP DISC (PIECES)",
+      "quantity": 3000,
+      "ctn": 15
+    },
+    {
+      "marks": "BOM5055",
+      "description": "FLAP DISC (PIECES)",
+      "quantity": 3000,
+      "ctn": 15
+    },
+    {
+      "marks": "BOM5056",
+      "description": "FLAP DISC (PIECES)",
+      "quantity": 3000,
+      "ctn": 15
+    },
+    {
+      "marks": "POW7509",
+      "description": "IMPACT WRENCH (PIECES)",
+      "quantity": 100,
+      "ctn": 25
+    }
+  ]
+}

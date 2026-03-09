@@ -1,0 +1,122 @@
+<html>
+<head>    
+	<meta name="viewport" content="interactive-widget=resizes-content" />
+</head>
+	<body>  
+		<div style="background-color:#f1f2f3 !important;">
+		
+			<div style="max-width:640px;text-align:center; margin:0 auto;">	
+				<div style="background-color:white !important;">
+					<div style="vertical-align: top">
+						<img id="imglogo" style="border:0;width:100%;max-height:190px;object-fit:cover;display: block;" width="640" src="cid:imglogo">
+					</div>
+					<br>
+					<h2 style="font-weight: bold;font-size: 1.5625rem !important; ">¡Solicitud de Aprobacion!</h2>
+					
+					<div style="border-bottom: 2px solid #f1f2f3 !important; border-top: 2px solid #f1f2f3 !important;padding:1rem !important;">
+						<p style="font-weight: bold;  font-size: 1.2rem !important; margin: 0 auto !important;" id="nombre">{$pnombre}</p>
+						<p style="margin: 0 auto !important;font-size: 1.0rem !important;">{$pusuario} ha generado una solicitud de aprobacion de pago H2H.</p>
+					</div>
+					
+					<div style="background-color:white !important;padding-right:1rem !important;padding-left:1rem !important;padding-bottom:2rem !important;">
+						<table style="width:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+							<tr>
+								<td>
+									<table style="width:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+										<colgroup>
+											<col style="width: 45%;" />
+											<col />
+											<col style="width: 45%;" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<td style="text-align: left;" colspan="3">
+													<p style=" font-weight: bold;  font-size: 0.8rem !important;">DATOS</p>
+												</td>
+											</tr>
+											<tr>
+												<td style="vertical-align: top;text-align: left;">
+													<p style="vertical-align: top;font-weight: bold;  font-size: 0.8rem !important; margin: 0 auto !important;">Codigo</p>
+													<p style="vertical-align: top;margin: 0 auto !important;font-size: 0.8rem !important;" id="porden">{$pcodigo}</p>
+												</td>
+												<td></td>
+												<td style="vertical-align: top;text-align: left;">
+													<p style="vertical-align: top; font-weight: bold;  font-size: 0.8rem !important; margin: 0 auto !important;">Fecha</p>
+													<p style="vertical-align: top;margin: 0 auto !important;font-size: 0.8rem !important;" id="pdireccion1">{$pfecha}</p>
+												</td>
+											</tr>
+											<tr>
+												<td style="vertical-align: top;text-align: left;">
+													<p style="vertical-align: top;font-weight: bold;  font-size: 0.8rem !important; margin: 0 auto !important;">Cuenta</p>
+													<p style="vertical-align: top;margin: 0 auto !important;font-size: 0.8rem !important;" id="porden">{$pcuenta}</p>
+												</td>
+												<td></td>
+												<td style="vertical-align: top;text-align: left;">
+													<p style="vertical-align: top; font-weight: bold;  font-size: 0.8rem !important; margin: 0 auto !important;">Monto</p>
+													<p style="vertical-align: top;margin: 0 auto !important;font-size: 0.8rem !important;" id="pentregar">{$pmonto}</p>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3">
+													<br>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" style="text-align: left;">
+													<p style=" margin: 0 auto !important;text-align: justify !important;font-size: 0.8rem !important;">
+													Acceda al siguiente enlace para realizar la <a href="{$purlaprobacion}">aprobacion</a>
+													</p>
+												</td>
+											</tr>											
+										</tbody>
+									</table>
+								<td>
+							</tr>
+							<tr>
+								<td>
+									<br>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table style="width:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+										<tbody style='border: 1px solid #979595;'>
+											<tr>
+												<td style='vertical-align:top'>
+													<table style="width:100%;border: 0.2px solid #979595;border-radius: 10px;">
+														<colgroup>
+															<col style="width: 35%;" />
+															<col style="width: 65%;" />
+														</colgroup>
+														<tbody style='border: 0.2px solid #979595;'>
+															<tr>
+																<td colspan="2"style="text-align:center;">DETALLE</td>																
+																</td>
+															</tr>
+															{tbody}
+														</tbody>
+													</table>
+												</td>
+											<tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<br>
+									<br>
+								</td>
+							</tr>
+							<tr>
+								<td <td style="vertical-align: top;text-align: left;">
+									<p style=" margin: 0 auto !important;">Agradecemos su atecion</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+﻿.embed-responsive {
+    position: relative !important;
+    padding-bottom: 56.25% !important;    
+    /*padding-top: 20px !important;*/
+    /*overflow: hidden !important;*/
+}
+/* Portrait */
+@media (max-device-width: 800px) and (orientation: portrait) {
+    .embed-responsive {
+        height: 750px !important;
+    }
+
+    .nav-empresa {
+        display: none;
+    }
+
+    .nav-local {
+        display: none;
+    }
+
+    .navbar-img {
+        display: none !important;
+    }
+}
+
+/* Landscape */
+@media (max-device-width: 1280px) and (orientation: landscape) {
+}
+
+.embed-responsive iframe,
+.embed-responsive object,
+.embed-responsive embed {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.content {
+    /*padding-left: 2.15rem !important;
+    padding-right: 2.15rem !important;*/
+    padding-top:4rem!important;
+}
+
+
+.closetab {
+    margin: -2px 0 0 10px !important;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color:dimgrey;
+    position:relative;
+}

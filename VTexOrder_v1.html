@@ -1,0 +1,218 @@
+<html>
+<head>    
+</head>
+	<body>  
+		<div style="background-color:#cbd0dd !important;padding:4rem 1.5rem 6.375rem 1.5rem !important;">
+		
+			<div style="text-align:center; width:680px; margin:0 auto;">			
+				<div>					
+					<img id="imglogo" style="width:100%;height:100px;height:180px" src="cid:imglogo">
+				</div>
+				<div style="background-color:white !important;padding:2rem !important;">
+					<table style="width:100%">											
+						<tr>	
+							<td style="text-align: center;">
+								<h2 style="color: #4B0082; font-size: 1.5625rem !important; font-family:Arial,Tahoma,Helvetica; font-weight: bold">¡Tu pedido esta listo!</h2>
+								<p style="font-family:Arial,Tahoma,Helvetica; font-weight: bold; margin: 0 auto !important;" id="nombre">{$pnombre}</p>
+								<p style="font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;">Tu pedido ya esta disponible en tienda para que puedas pasar a recogerlo,</p>
+								<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;" >¡Te esperamos!</p>
+							</td>
+						</tr>	
+						<tr>
+							<td>
+								<table>
+									<colgroup>
+										<col style="width: 100px;" />
+										<col style="width: 180px;" />
+										<col />
+										<col style="width: 100px;" />
+										<col style="width: 180px;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<td colspan="5" style="text-align: left;">
+												<p style="font-family:Arial,Tahoma,Helvetica; font-weight: bold; font-size: 1.0rem !important;">DATOS PARA LA ENTREGA</p>
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align: top;text-align: left;">
+												<p style="font-family:Arial,Tahoma,Helvetica; font-weight: bold; font-size: 1.0rem !important; margin: 0 auto !important;">Pedido</p>
+											</td>
+											<td style="vertical-align: top;">
+												<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;" id="porden">{$porden}</p>
+											</td>
+											<td></td>
+											<td style="vertical-align: top;text-align: left;">
+												<p style="font-family:Arial,Tahoma,Helvetica; font-weight: bold; font-size: 1.0rem !important; margin: 0 auto !important;">Tienda</p>
+											</td>
+											<td style="vertical-align: top;text-align: left;">
+												<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;" id="pdireccion1">{$pdireccion1}</p>
+												<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;" label id="pdireccion2">{$pdireccion2}</p>
+												<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;" id="pdireccion3">{$pdireccion3}</p>
+												<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;" id="pdireccion4">{$pdireccion4}</p>
+												<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;" id="pdireccion5">{$pdireccion5}</p>
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align: top;text-align: left;">
+												<p style="font-family:Arial,Tahoma,Helvetica; font-weight: bold; font-size: 1.0rem !important; margin: 0 auto !important;">Entregar a</p>
+											</td>
+											<td style="vertical-align: top;">
+												<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;" id="pentregar">{$pentregar}</p>
+											</td>
+											<td colspan="3"></td>
+										</tr>
+										<tr>
+											<td colspan="5">
+												<br>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="5" style="text-align: left;">
+												<p style="color:#4B0082;font-family:Arial,Tahoma,Helvetica; font-weight: bold; margin: 0 auto !important;">Quien recogera tu pedido?</p>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="5" style="text-align: left;">
+												<input id="rediorecojo1" type="radio" name="rediorecojo" value="1" checked="">
+												<label for="rediorecojo1" style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;">Lo recojo yo</label>
+												<br />
+												<input id="rediorecojo2" type="radio" name="rediorecojo" value="2">
+												<label for="rediorecojo2" style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;">Lo recoge alguien más</label><br>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="5" style="text-align: left;">
+												<p style="font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important; ">Recuerda que la persona que recoja el pedido deberá presentar su documento de identidad.</p>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="5">
+												<br>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="5" style="text-align: left;">										
+												<p style="font-family:Arial,Tahoma,Helvetica; font-weight: bold; font-size: 1.0rem !important;margin:0 auto!important">DETALLE DEL RECOJO</p>	
+											</td>
+										</tr>
+										<tr>
+											<td colspan="5" style="text-align: left;">
+												<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica;margin:0 auto!important" id="padditionalinfo">{$padditionalinfo}</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							<td>
+						</tr>
+						<tr>
+							<td>
+								<br>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table>
+									<colgroup>
+										<col style="width: 460px;" />
+										<col />
+										<col style="width: 200px;" />
+									</colgroup>
+									<tbody style='border: 1px solid #979595;'>
+										<tr>
+											<td style='vertical-align:top'>
+												<table style="width:100%;border: 0.2px solid #979595;border-radius: 10px;">
+													<colgroup>
+														<col style="width: 35%;" />
+														<col style="width: 65%;" />
+													</colgroup>
+													<tbody style='border: 0.2px solid #979595;'>
+														<tr>
+															<td colspan="2"  style="text-align:center;">
+																<p style="font-family:Arial,Tahoma,Helvetica; font-weight: bold; font-size: 1.0rem !important; margin: 0 auto !important;">PRODUCTOS</p>
+															</td>
+														</tr>
+														{tbody}
+													</tbody>
+												</table>
+											</td>
+											<td style='text-align:center;vertical-align:top'>												
+											</td>
+											<td style='vertical-align:top'>
+												<table style='padding:1rem !important;border: 0.2px solid #979595;border-radius: 10px;'>
+													<colgroup>
+														<col style="width: 50%;" />
+														<col style="width: 50%;" />
+													</colgroup>
+													<tbody>
+														<tr>
+															<td colspan="2" style="text-align:center;">
+																<p style="font-family:Arial,Tahoma,Helvetica; font-weight: bold; font-size: 1.0rem !important; margin: 0 auto !important;">RESUMEN</p>
+															</td>
+														</tr>
+														<tr>
+															<td colspan='2'>
+																<hr style='border: 0.2px solid #979595;'>
+															</td>
+														</tr>
+														<tr style='border: 1px solid #979595;'>
+															<td style="text-align:left">
+																<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;" id="pentregar">Productos:</p>
+															</td>
+															<td style="text-align:right">
+																<label id="productsamount" style='font-family:Arial,Tahoma,Helvetica;'>{$productsamount}</label>
+															</td>
+														</tr>
+
+														<tr style='border: 1px solid #979595;'>
+															<td style="text-align:left">
+																<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;" id="pentregar">Descuentos:</p>
+															</td>
+															<td style="text-align:right">
+																<label id="productsamount" style='font-family:Arial,Tahoma,Helvetica;'>{$discountsamount}</label>
+															</td>
+														</tr>
+														<tr>
+															<td colspan='2'>
+																<hr style='border: 0.5px solid #979595;'>
+															</td>
+														</tr>
+														<tr style='border: 1px solid #979595;'>
+															<td style="text-align:left">
+																<p style="font-family:Arial,Tahoma,Helvetica; font-weight: bold; margin: 0 auto !important;" id="pentregar">Total:</p>
+															</td>
+															<td style="text-align:right">
+																<label id="productsamount" style='font-family:Arial,Tahoma,Helvetica;font-weight: bold;'>{$totalamount}</label>
+															</td>
+														</tr>
+														<tr>
+															<td colspan='2'>
+																<hr style='border: 0.5px solid #979595;'>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										<tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br>
+								<br>
+							</td>
+						</tr>
+						<tr>
+							<td <td style="vertical-align: top;text-align: left;">
+								<p style="font-family:Arial,Tahoma,Helvetica; margin: 0 auto !important;">Agradecemos su preferencia</p>
+								<p style="color: #4B0082; font-family:Arial,Tahoma,Helvetica; font-weight: bold; font-size: 1.0rem !important; margin: 0 auto !important;">ILARIA</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="61ba0b00-3728-4540-b74d-2e5110d69380" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://rpe-rdocument.com:8080/ServicioDocumentos/Documento.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Documento.disco" MetadataType="Disco" ID="2a405bef-4b66-4264-8bfd-3e4ec774cf86" SourceId="1" SourceUrl="http://rpe-rdocument.com:8080/ServicioDocumentos/Documento.svc?disco" />
+    <MetadataFile FileName="Documento.xsd" MetadataType="Schema" ID="7b618ec1-62f7-4283-b6e3-65a31d432a20" SourceId="1" SourceUrl="http://rpe-rdocument.com:8080/ServicioDocumentos/Documento.svc?xsd=xsd2" />
+    <MetadataFile FileName="Documento.wsdl" MetadataType="Wsdl" ID="2a3e2517-f050-44e5-a888-fd2608db2073" SourceId="1" SourceUrl="http://rpe-rdocument.com:8080/ServicioDocumentos/Documento.svc?wsdl" />
+    <MetadataFile FileName="Documento1.xsd" MetadataType="Schema" ID="a0d8180a-5543-458f-bd90-6b066bdd9cd5" SourceId="1" SourceUrl="http://rpe-rdocument.com:8080/ServicioDocumentos/Documento.svc?xsd=xsd1" />
+    <MetadataFile FileName="Documento1.wsdl" MetadataType="Wsdl" ID="af50198c-6f60-405a-8e74-76170eed2460" SourceId="1" SourceUrl="http://rpe-rdocument.com:8080/ServicioDocumentos/Documento.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Documento2.xsd" MetadataType="Schema" ID="9b9c107a-0d83-44d0-bf1a-f58de1422588" SourceId="1" SourceUrl="http://rpe-rdocument.com:8080/ServicioDocumentos/Documento.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

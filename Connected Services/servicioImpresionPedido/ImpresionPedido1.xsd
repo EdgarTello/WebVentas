@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServicioImpresion" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServicioImpresion" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RespuestaDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensajeError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PdfImpresion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLEnvio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaDocumento" nillable="true" type="tns:RespuestaDocumento" />
+  <xs:complexType name="Pedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Footer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Impresora" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sonido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ticket" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pedido" nillable="true" type="tns:Pedido" />
+</xs:schema>

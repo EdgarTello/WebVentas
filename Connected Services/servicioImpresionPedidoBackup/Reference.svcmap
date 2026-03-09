@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fbef78f3-eae6-4840-b8b4-a53bf9f2f14c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://twotecnology.online/ServicioImpresion/ImpresionPedido.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ImpresionPedido.xsd" MetadataType="Schema" ID="8cb0b20d-1815-4f8e-98a0-8b146da2fc1e" SourceId="1" SourceUrl="http://twotecnology.online/ServicioImpresion/ImpresionPedido.svc?xsd=xsd2" />
+    <MetadataFile FileName="ImpresionPedido1.xsd" MetadataType="Schema" ID="e0d3d41f-e558-4248-bcbe-cda3df4b2bba" SourceId="1" SourceUrl="http://twotecnology.online/ServicioImpresion/ImpresionPedido.svc?xsd=xsd0" />
+    <MetadataFile FileName="ImpresionPedido.wsdl" MetadataType="Wsdl" ID="ee7572a6-c153-4c32-86d1-bf3b5ca1e6bf" SourceId="1" SourceUrl="http://twotecnology.online/ServicioImpresion/ImpresionPedido.svc?wsdl" />
+    <MetadataFile FileName="ImpresionPedido2.xsd" MetadataType="Schema" ID="0a3f2442-fe42-47bf-849c-3b28257fc28d" SourceId="1" SourceUrl="http://twotecnology.online/ServicioImpresion/ImpresionPedido.svc?xsd=xsd1" />
+    <MetadataFile FileName="ImpresionPedido.disco" MetadataType="Disco" ID="511edab4-276d-4aaf-aea6-460a7d2bd69d" SourceId="1" SourceUrl="http://twotecnology.online/ServicioImpresion/ImpresionPedido.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

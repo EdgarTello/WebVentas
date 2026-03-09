@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ImpresionPedido" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IDocumentoPedido_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://twotecnology.online/ServicioImpresion/ImpresionPedido.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://twotecnology.online/ServicioImpresion/ImpresionPedido.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://twotecnology.online/ServicioImpresion/ImpresionPedido.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TwoTecnology.ServicioImpresion" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocumentoPedido_EstadoDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_EstadoDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_Existe_InputMessage">
+    <wsdl:part name="parameters" element="tns:Existe" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_Existe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ExistsWithKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExistsWithKey" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ExistsWithKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExistsWithKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ObtenerByCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerByCodigo" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ObtenerByCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerByCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ObtenerTextoByCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTextoByCodigo" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ObtenerTextoByCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTextoByCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ObtenerPdfA4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPdfA4" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ObtenerPdfA4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPdfA4Response" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ObtenerPdf58_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPdf58" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ObtenerPdf58_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPdf58Response" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ObtenerPdf80_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPdf80" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoPedido_ObtenerPdf80_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPdf80Response" />
+  </wsdl:message>
+  <wsdl:portType name="IDocumentoPedido">
+    <wsdl:operation name="EstadoDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoPedido/EstadoDocumento" message="tns:IDocumentoPedido_EstadoDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoPedido/EstadoDocumentoResponse" message="tns:IDocumentoPedido_EstadoDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Existe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoPedido/Existe" message="tns:IDocumentoPedido_Existe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoPedido/ExisteResponse" message="tns:IDocumentoPedido_Existe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistsWithKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoPedido/ExistsWithKey" message="tns:IDocumentoPedido_ExistsWithKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoPedido/ExistsWithKeyResponse" message="tns:IDocumentoPedido_ExistsWithKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoPedido/Obtener" message="tns:IDocumentoPedido_Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoPedido/ObtenerResponse" message="tns:IDocumentoPedido_Obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerByCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoPedido/ObtenerByCodigo" message="tns:IDocumentoPedido_ObtenerByCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoPedido/ObtenerByCodigoResponse" message="tns:IDocumentoPedido_ObtenerByCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTextoByCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoPedido/ObtenerTextoByCodigo" message="tns:IDocumentoPedido_ObtenerTextoByCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoPedido/ObtenerTextoByCodigoResponse" message="tns:IDocumentoPedido_ObtenerTextoByCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoPedido/Actualizar" message="tns:IDocumentoPedido_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoPedido/ActualizarResponse" message="tns:IDocumentoPedido_Actualizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPdfA4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoPedido/ObtenerPdfA4" message="tns:IDocumentoPedido_ObtenerPdfA4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoPedido/ObtenerPdfA4Response" message="tns:IDocumentoPedido_ObtenerPdfA4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPdf58">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoPedido/ObtenerPdf58" message="tns:IDocumentoPedido_ObtenerPdf58_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoPedido/ObtenerPdf58Response" message="tns:IDocumentoPedido_ObtenerPdf58_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPdf80">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoPedido/ObtenerPdf80" message="tns:IDocumentoPedido_ObtenerPdf80_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoPedido/ObtenerPdf80Response" message="tns:IDocumentoPedido_ObtenerPdf80_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDocumentoPedido" type="tns:IDocumentoPedido">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EstadoDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/EstadoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Existe">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/Existe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistsWithKey">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ExistsWithKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerByCodigo">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ObtenerByCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTextoByCodigo">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ObtenerTextoByCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPdfA4">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ObtenerPdfA4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPdf58">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ObtenerPdf58" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPdf80">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ObtenerPdf80" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpsBinding_IDocumentoPedido" type="tns:IDocumentoPedido">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_IDocumentoPedido_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EstadoDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/EstadoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Existe">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/Existe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistsWithKey">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ExistsWithKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerByCodigo">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ObtenerByCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTextoByCodigo">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ObtenerTextoByCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPdfA4">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ObtenerPdfA4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPdf58">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ObtenerPdf58" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPdf80">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoPedido/ObtenerPdf80" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ImpresionPedido">
+    <wsdl:port name="BasicHttpBinding_IDocumentoPedido" binding="tns:BasicHttpBinding_IDocumentoPedido">
+      <soap:address location="http://twotecnology.online/ServicioImpresion/ImpresionPedido.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpsBinding_IDocumentoPedido" binding="tns:BasicHttpsBinding_IDocumentoPedido">
+      <soap:address location="https://win-ot6t64ij6ro/ServicioImpresion/ImpresionPedido.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

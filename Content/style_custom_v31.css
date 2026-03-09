@@ -1,0 +1,120 @@
+﻿thead {
+	background-color: #DAD2FF !important;
+	color: black !important;
+	text-align: center !important;
+	font-size: 18px;
+}
+
+.table td {
+	padding: 0;
+	vertical-align: middle;
+	font-size: 16px;
+}
+
+
+.table tfoot>tr>td {
+	background-color: #DAD2FF;
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.tbldetalle {
+	background: #FFFFFF !important;
+	border: 1px solid #C7C7C7 !important;
+	box-sizing: border-box !important;
+	box-shadow: 0px 4px 4px 5px rgba(12, 13, 41, 0.08) !important;
+	border-radius: 8px !important;
+	text-align: center !important;	
+}
+
+
+
+
+table {
+	background: #FFFFFF !important;
+	border: 1px solid #C7C7C7 !important;
+	box-sizing: border-box !important;
+	box-shadow: 0px 4px 4px 5px rgba(12, 13, 41, 0.08) !important;
+	border-radius: 8px !important;
+	text-align: center !important;
+	font-size: 12px;
+}
+
+
+.odd {
+	background: white !important;
+	text-align: center !important;
+}
+
+.even {
+	background: #F7F5FF !important;
+	text-align: center !important;
+}
+
+.btn {
+	font-family: revert !important;
+	padding: 0rem !important;
+}
+
+.btn-purple {
+	border: 2px solid #7B61FF !important;
+	box-sizing: border-box !important;
+	border-radius: 32px !important;
+	background: white !important;
+	color: #7B61FF !important;
+}
+
+body {
+	background-color: transparent !important;
+}
+
+
+h1 {
+	font-size:30px !important;
+}
+
+.custom_sidebar {
+	color: #7B61FF !important;
+}
+
+
+[class*=sidebar-light-] .sidebar a {
+	color: #7B61FF !important;
+	
+}
+
+[class*=sidebar-light-] .sidebar a:hover {
+	color: #7B61FF !important;
+}
+
+[class*=sidebar-light-] .sidebar a:visited {
+	color: #7B61FF !important;
+}
+
+[class*=sidebar-light-] .sidebar a:active {
+	color: black !important;
+}
+
+.border-cat {
+	border-radius: 25px !important;
+	border-width: 2px !important;
+	border-style: solid !important;
+	border-color: rgb(76 255 0) !important;
+	padding-top: 1%;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin: 0px auto;
+}
+
+
+.btndefault
+{
+    background: #7B61FF !important;
+    box-shadow: 0px 4px 4px rgba(98, 78, 199, 0.53) !important;
+    border-radius: 32px !important;
+    width: 100px !important;
+    height: 40px !important;
+    color: white !important;
+    border-color: #7B61FF !important;
+}

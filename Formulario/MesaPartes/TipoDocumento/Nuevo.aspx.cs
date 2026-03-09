@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TwoTecnology.WebVentas.Formulario.MesaPartes.TipoDocumento
+{
+    public partial class Nuevo : System.Web.UI.Page
+    {
+        string urlDefault = "../../../Formulario/MesaPartes/Frame/Salir.aspx";
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!Page.IsPostBack)
+            {
+                if (!Context.User.Identity.IsAuthenticated)
+                {
+                    Response.Write("<script>top.location='" + urlDefault + "';parent.location='" + urlDefault + "';</script>");
+                    Response.End();
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,157 @@
+﻿
+
+thead {
+	background-color: #DAD2FF !important;
+	color: black !important;
+	text-align: center !important;
+	font-size: 14px;
+}
+
+.tbldetalle {
+	background: #FFFFFF !important;
+	border: 1px solid #C7C7C7 !important;
+	box-sizing: border-box !important;
+	box-shadow: 0px 4px 4px 5px rgba(12, 13, 41, 0.08) !important;
+	border-radius: 8px !important;
+	text-align: center !important;	
+}
+
+table {
+	background: #FFFFFF !important;
+	border: 1px solid #C7C7C7 !important;
+	box-sizing: border-box !important;
+	box-shadow: 0px 4px 4px 5px rgba(12, 13, 41, 0.08) !important;
+	border-radius: 8px !important;
+	text-align: center !important;
+	font-size: 12px;
+}
+
+.ltime {
+	color: darkblue !important;
+	font-style: normal !important;
+	font-weight: bold !important;
+	font-size: 14px !important;
+}
+
+.lubicacion {
+	color: black !important;
+	font-style: normal !important;
+	font-weight: bold !important;
+	font-size: 20px !important;
+	line-height:0px !important;
+
+}
+
+.lemployee {
+	color: gray !important;
+	font-style: normal !important;
+	font-weight: bold !important;
+	font-size: 16px !important;
+}
+
+.label4 {
+	color: #000000;
+	font-size: 24px; /* Aproximación debida a la sustitución de la fuente */
+	font-weight: bold;
+	line-height: 28px; /* Aproximación debida a la sustitución de la fuente */
+	text-align: center;
+	color: gray;
+}
+
+
+.btn-ubi {
+	vertical-align: middle;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px 4px rgba(10, 17, 33, 0.05);
+	border-radius: 80px;
+    text-align: center;
+    line-height: 10px !important;
+
+    font-size: 18px;
+    width: 140px;
+	height: 70px;
+	margin: 5px;
+
+	color: #000000;
+	font-style: normal;
+	font-weight: bold;
+	
+	
+}
+
+.btn-danger1 {
+	background: #FECCCC;
+	border: 3px dashed #E76060;
+	
+}
+
+.btn-success1 {
+	background: #CCE3FE;
+	border: 3px dashed #609EE7;
+}
+
+.btn-light1 {
+	background: #D9FED3;
+	border: 3px dashed #31F300;
+}
+
+/*button {
+	background: #7B61FF !important;
+	box-shadow: 0px 4px 4px rgba(98, 78, 199, 0.53) !important;
+	border-radius: 32px !important;
+	width: 120px !important;
+	height: 40px !important;
+	color: white !important;
+	border-color: #7B61FF !important;
+}*/
+
+
+
+.odd {
+	background: white !important;
+	text-align: center !important;
+}
+
+.even {
+	background: #F7F5FF !important;
+	text-align: center !important;
+}
+
+.btn-purple {
+	border: 2px solid #7B61FF !important;
+	box-sizing: border-box !important;
+	border-radius: 32px !important;
+	background: white !important;
+	color: #7B61FF !important;
+}
+
+body {
+	background-color: transparent !important;
+}
+
+
+h1 {
+	font-size:30px !important;
+}
+
+.custom_sidebar {
+	color: #7B61FF !important;
+}
+
+
+[class*=sidebar-light-] .sidebar a {
+	color: #7B61FF !important;
+	
+}
+
+[class*=sidebar-light-] .sidebar a:hover {
+	color: #7B61FF !important;
+}
+
+[class*=sidebar-light-] .sidebar a:visited {
+	color: #7B61FF !important;
+}
+
+[class*=sidebar-light-] .sidebar a:active {
+	color: black !important;
+}
