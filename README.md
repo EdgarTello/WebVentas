@@ -145,3 +145,30 @@ Sigue estos pasos para levantar el entorno de desarrollo en tu máquina.
    El sistema debería abrirse por defecto en `Default.aspx`.
   
 ¡Mucho éxito en tus primeros aportes a la plataforma! Si es tu primer ticket o requerimiento, no dudes en mapear la cadena de dependencias observando el tab _"Referencias"_ en el proyecto. 
+
+---
+
+## 🌱 Nueva Aplicación (Clean Architecture)
+
+Actualmente, el proyecto se encuentra en un proceso de migración hacia una nueva arquitectura limpia (Clean Architecture) utilizando **.NET 8+**. El nuevo código base se encuentra en el directorio `WebVentas.Core`.
+
+Para ejecutar esta nueva aplicación (API REST):
+
+### Prerrequisitos
+- .NET 8 SDK instalado.
+
+### Pasos para ejecutar:
+1. Abre una terminal en la raíz del proyecto.
+2. Navega al directorio de la API:
+   ```bash
+   cd WebVentas.Core/WebVentas.Core.API
+   ```
+3. Restaura las dependencias, compila y ejecuta la aplicación:
+   ```bash
+   dotnet restore
+   dotnet build
+   dotnet run
+   ```
+4. Se levantará el servidor local y podrás acceder a la interfaz de Swagger (por defecto) para visualizar y probar los endpoints.
+
+Para más detalles sobre la estructura de la nueva arquitectura, consulta el [README de WebVentas.Core](WebVentas.Core/README.md).
