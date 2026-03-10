@@ -167,7 +167,7 @@ Para ejecutar esta nueva aplicación (API REST):
    ```
 
 2. **Configuración de la Base de Datos**:
-   Asegúrate de revisar el archivo `appsettings.json` o `appsettings.Development.json` dentro de `WebVentas.Core.API` para verificar que la cadena de conexión (`ConnectionStrings`) apunte a tu entorno local o de desarrollo de base de datos.
+   Asegúrate de revisar el archivo `appsettings.json` o `appsettings.Development.json` dentro de `WebVentas.Core.API` para verificar que la cadena de conexión bajo la llave `"WebVentas.Core"` apunte a tu entorno local o de desarrollo (por defecto, configurada hacia el servidor `54.39.107.69,11432` con la base de datos `ventas_v2`).
 
 3. **Restaurar y compilar** la solución completa:
    ```bash

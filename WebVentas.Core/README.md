@@ -29,7 +29,8 @@ Puedes abrir la solución `WebVentas.Core.sln` en **Visual Studio 2022**, o desd
 
 ### 1. Configuración Previa
 
-Verifica el archivo `appsettings.json` o `appsettings.Development.json` en el proyecto `WebVentas.Core.API` para asegurarte de tener la cadena de conexión correcta a tu entorno de base de datos.
+Verifica los archivos `appsettings.json` o `appsettings.Development.json` en el proyecto `WebVentas.Core.API` para asegurarte de tener la cadena de conexión correcta a tu entorno de base de datos. 
+La aplicación utiliza la llave `"WebVentas.Core"` dentro de `ConnectionStrings`, la cual por defecto se encuentra configurada para apuntar al servidor `54.39.107.69,11432` (base de datos `ventas_v2`).
 
 ### 2. Restaurar dependencias y compilar
 
