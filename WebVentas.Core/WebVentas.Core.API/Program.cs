@@ -9,6 +9,7 @@ using WebVentas.Core.Application.Interfaces;
 using WebVentas.Core.Infrastructure.Services;
 using WebVentas.Core.Application.UseCases.Auth;
 using WebVentas.Core.Application.UseCases.Caja;
+using WebVentas.Core.Application.UseCases.Pos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,7 @@ builder.Services.AddScoped<IDocumentoRepository, DocumentoRepository>();
 builder.Services.AddScoped<IOperacionCajaRepository, OperacionCajaRepository>();
 builder.Services.AddScoped<ISapSyncService, SapSyncService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IVentaPosRepository, VentaPosRepository>();
 
 // Dependencias de Aplicación (Casos de Uso Documentos)
 builder.Services.AddScoped<GetDocumentoByIdUseCase>();
@@ -43,6 +45,7 @@ builder.Services.AddScoped<LoginUseCase>();
 builder.Services.AddScoped<AperturarCajaUseCase>();
 builder.Services.AddScoped<CerrarCajaUseCase>();
 builder.Services.AddScoped<GetOperacionesCajaUseCase>();
+builder.Services.AddScoped<RegistrarVentaPosUseCase>();
 
 var app = builder.Build();
 

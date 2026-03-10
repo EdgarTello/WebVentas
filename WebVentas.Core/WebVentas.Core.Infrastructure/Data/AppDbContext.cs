@@ -11,6 +11,8 @@ namespace WebVentas.Core.Infrastructure.Data
 
         public DbSet<Documento> Documentos { get; set; }
         public DbSet<OperacionCaja> OperacionesCaja { get; set; }
+        public DbSet<VentaPos> VentasPos { get; set; }
+        public DbSet<VentaPosDetalle> VentaPosDetalles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,6 +36,23 @@ namespace WebVentas.Core.Infrastructure.Data
                 entity.Property(e => e.EfectivoApertura).HasColumnType("decimal(18,2)");
                 entity.Property(e => e.EfectivoCierre).HasColumnType("decimal(18,2)").IsRequired(false);
                 entity.Property(e => e.TarjetaCierre).HasColumnType("decimal(18,2)").IsRequired(false);
+            });
+
+            // Configuración para VentaPos
+            modelBuilder.Entity<VentaPos>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Estado).IsRequired().HasMaxLength(20);
+                entity.Property(e => e.SerieDocumento).HasMaxLength(4);
+                entity.Property(e => e.NroDocumento).HasMaxLength(15);
+                entity.HasMany(e => e.Detalles).WithOne(e => e.VentaPos).HasForeignKey(e => e.VentaPosId).OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<VentaPosDetalle>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.IdProducto).IsRequired().HasMaxLength(50);
+                entity.Property(e => e.Descripcion).IsRequired().HasMaxLength(200);
             });
         }
     }
