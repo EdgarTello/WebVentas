@@ -1,41 +1,52 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using WebVentas.Core.Infrastructure.Data;
+using WebVentas.Core.Domain.Interfaces;
+using WebVentas.Core.Infrastructure.Repositories;
+using WebVentas.Core.Application.UseCases.Documentos;
+using WebVentas.Core.Application.Interfaces;
+using WebVentas.Core.Infrastructure.Services;
+using WebVentas.Core.Application.UseCases.Auth;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Configuracion EF Core en memoria para PoC
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseInMemoryDatabase("WebVentasPoCDb"));
+
+// Dependencias de Infraestructura (Persistencia y Servicios Externos)
+builder.Services.AddScoped<IDocumentoRepository, DocumentoRepository>();
+builder.Services.AddScoped<ISapSyncService, SapSyncService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+
+// Dependencias de Aplicación (Casos de Uso Documentos)
+builder.Services.AddScoped<GetDocumentoByIdUseCase>();
+builder.Services.AddScoped<GetAllDocumentosUseCase>();
+builder.Services.AddScoped<CreateDocumentoUseCase>();
+builder.Services.AddScoped<UpdateDocumentoUseCase>();
+builder.Services.AddScoped<DeleteDocumentoUseCase>();
+builder.Services.AddScoped<AnularDocumentoUseCase>();
+builder.Services.AddScoped<SyncDocumentoToErpUseCase>();
+
+// Dependencias de Aplicación (Casos de Uso Auth)
+builder.Services.AddScoped<LoginUseCase>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
-
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+app.UseAuthorization();
+app.MapControllers();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
