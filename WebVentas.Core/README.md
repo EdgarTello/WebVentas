@@ -25,15 +25,33 @@ La solución `WebVentas.Core.sln` se compone de cuatro proyectos interconectados
 
 ## 🚀 Cómo Iniciar
 
-Puedes abrir la solución `WebVentas.Core.sln` en **Visual Studio 2022**, o desde terminal:
+Puedes abrir la solución `WebVentas.Core.sln` en **Visual Studio 2022**, o desde terminal siguiendo estos pasos:
+
+### 1. Configuración Previa
+
+Verifica el archivo `appsettings.json` o `appsettings.Development.json` en el proyecto `WebVentas.Core.API` para asegurarte de tener la cadena de conexión correcta a tu entorno de base de datos.
+
+### 2. Restaurar dependencias y compilar
+
+Abre una terminal y navega a la raíz de la solución (`WebVentas.Core`), luego ejecuta:
 
 ```bash
-cd WebVentas.Core
 dotnet restore
 dotnet build
 ```
 
-Para correr la API temporalmente y levantar Swagger (por defecto):
+### 3. Aplicar Migraciones de Entity Framework (Opcional)
+
+Si necesitas instalar y actualizar la base de datos con las últimas entidades de dominio:
+
+```bash
+dotnet ef database update --project WebVentas.Core.Infrastructure --startup-project WebVentas.Core.API
+```
+*(Requiere tener instalado previamente: `dotnet tool install --global dotnet-ef`)*
+
+### 4. Ejecutar la API
+
+Para correr la API temporalmente y levantar la interfaz interactiva Swagger:
 
 ```bash
 cd WebVentas.Core.API

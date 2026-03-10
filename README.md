@@ -155,20 +155,40 @@ Actualmente, el proyecto se encuentra en un proceso de migración hacia una nuev
 Para ejecutar esta nueva aplicación (API REST):
 
 ### Prerrequisitos
-- .NET 8 SDK instalado.
+- **.NET 8 SDK** instalado.
+- Opcionalmente, herramientas de Entity Framework Core instaladas para gestionar la base de datos (`dotnet tool install --global dotnet-ef`).
+- Visual Studio 2022 o VS Code.
 
-### Pasos para ejecutar:
-1. Abre una terminal en la raíz del proyecto.
-2. Navega al directorio de la API:
+### Pasos detallados para ejecutar:
+
+1. **Abre una terminal** en la raíz del proyecto y navega al directorio del backend:
    ```bash
-   cd WebVentas.Core/WebVentas.Core.API
+   cd WebVentas.Core
    ```
-3. Restaura las dependencias, compila y ejecuta la aplicación:
+
+2. **Configuración de la Base de Datos**:
+   Asegúrate de revisar el archivo `appsettings.json` o `appsettings.Development.json` dentro de `WebVentas.Core.API` para verificar que la cadena de conexión (`ConnectionStrings`) apunte a tu entorno local o de desarrollo de base de datos.
+
+3. **Restaurar y compilar** la solución completa:
    ```bash
    dotnet restore
    dotnet build
+   ```
+
+4. **Aplicar Migraciones (Entity Framework)**:
+   Si existen cambios en la base de datos o es tu primera ejecución, aplica las migraciones desde la raíz de `WebVentas.Core`:
+   ```bash
+   dotnet ef database update --project WebVentas.Core.Infrastructure --startup-project WebVentas.Core.API
+   ```
+
+5. **Ejecutar la API**:
+   Navega al proyecto responsable de recibir peticiones (API) y arranca la aplicación:
+   ```bash
+   cd WebVentas.Core.API
    dotnet run
    ```
-4. Se levantará el servidor local y podrás acceder a la interfaz de Swagger (por defecto) para visualizar y probar los endpoints.
+
+6. **Probar la Aplicación**:
+   Una vez iniciado, visita la URL indicada en la consola (usualmente `http://localhost:5000/swagger` o `https://localhost:5001/swagger`) para acceder a la interfaz Swagger, donde podrás explorar y testear los nuevos endpoints.
 
 Para más detalles sobre la estructura de la nueva arquitectura, consulta el [README de WebVentas.Core](WebVentas.Core/README.md).
