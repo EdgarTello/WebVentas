@@ -50,13 +50,17 @@ builder.Services.AddScoped<RegistrarVentaPosUseCase>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Siempre activar Swagger en entorno local de pruebas
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+// Redirigir el trafico de la raiz hacia la interfaz de Swagger para evitar página vacía
+app.MapGet("/", context => {
+    context.Response.Redirect("/swagger");
+    return Task.CompletedTask;
+});
+
+// app.UseHttpsRedirection(); // Comentado para prevenir error Failed to determine https port
 app.UseAuthorization();
 app.MapControllers();
 

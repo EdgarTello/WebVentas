@@ -59,15 +59,15 @@ Es hora de verificar que todo funciona desde tu propia computadora.
    ```powershell
    dotnet run
    ```
-   *Verás varias letras blancas y amarillas. Solo busca la frase amarilla que dice **"Now listening on: http://localhost:5000"** (el número al final puede variar a 5001 o similar).*
+   *Verás varias letras blancas y amarillas. Solo busca la frase amarilla que dice **"Now listening on: http://localhost:5273"** (el número al final puede variar a otro puerto dependiendo de tu equipo).*
 
 ### 4. ¿Cómo probar la API a nivel de usuario? (Interfaz Swagger)
 
 La aplicación trae integrada **Swagger**, una página web muy amigable y visual para interactuar con las rutas como si tuviéramos un panel de control, sin escribir código.
 
 1. Abre tu navegador web favorito (Chrome, Edge, Firefox).
-2. En la parte de arriba donde pones las direcciones web (Ej: google.com), escribe el enlace que te dio PowerShell seguido de `/swagger` y presiona *Enter*.
-   **Ejemplo:** `http://localhost:5000/swagger`
+2. En la parte de arriba donde pones las direcciones web (Ej: google.com), escribe el enlace que te dio PowerShell y presiona *Enter*. (Serás redirigido automáticamente a la pantalla de la API).
+   **Ejemplo:** `http://localhost:5273`
 3. Verás una pantalla blanca con verde con el título **"WebVentas.Core.API"** y una lista de "Controladores" (que son las funciones disponibles).
 4. **¡Haz tu primera prueba!**:
    - Haz clic sobre cualquier ruta que empiece con `GET` (son de color azul). Por ejemplo: `GET /api/v1/ventas`.

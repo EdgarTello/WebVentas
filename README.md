@@ -183,6 +183,6 @@ Para ejecutar esta nueva aplicación (API REST):
    ```
 
 5. **Probar la Aplicación**:
-   Una vez iniciado, visita la URL indicada en la consola (usualmente `http://localhost:5000/swagger` o `https://localhost:5001/swagger`) para acceder a la interfaz Swagger, donde podrás explorar y testear los nuevos endpoints.
+   Una vez iniciado, visita la URL indicada en la consola (usualmente `http://localhost:5273`) para acceder a la interfaz Swagger, donde podrás explorar y testear los nuevos endpoints. La URL te reedirigirá automáticamente.
 
 Para más detalles sobre la estructura de la nueva arquitectura, consulta el [README de WebVentas.Core](WebVentas.Core/README.md).
