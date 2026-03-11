@@ -41,22 +41,7 @@ dotnet restore
 dotnet build
 ```
 
-### 3. Aplicar Migraciones de Base de Datos (Entity Framework)
-
-Las *Migraciones* son código que aplica cambios desde nuestra aplicación hacia las tablas de la base de datos de manera automática.
-
-Para aplicar cualquier cambio pendiente a la base de datos (requerido al empezar):
-1. Abre tu terminal en la carpeta principal `WebVentas.Core`.
-2. Asegúrate de tener la herramienta de EF Core instalada ejecutando:
-   ```bash
-   dotnet tool install --global dotnet-ef
-   ```
-3. Ahora, aplica la estructura de datos:
-   ```bash
-   dotnet ef database update --project WebVentas.Core.Infrastructure --startup-project WebVentas.Core.API
-   ```
-
-### 4. Ejecutar la Aplicación para Pruebas Locales (Paso a Paso)
+### 3. Ejecutar la Aplicación para Pruebas Locales (Paso a Paso)
 
 Es hora de verificar que todo funciona desde tu propia computadora.
 
@@ -76,7 +61,7 @@ Es hora de verificar que todo funciona desde tu propia computadora.
    ```
    *Verás varias letras blancas y amarillas. Solo busca la frase amarilla que dice **"Now listening on: http://localhost:5000"** (el número al final puede variar a 5001 o similar).*
 
-### 5. ¿Cómo probar la API a nivel de usuario? (Interfaz Swagger)
+### 4. ¿Cómo probar la API a nivel de usuario? (Interfaz Swagger)
 
 La aplicación trae integrada **Swagger**, una página web muy amigable y visual para interactuar con las rutas como si tuviéramos un panel de control, sin escribir código.
 
@@ -90,20 +75,8 @@ La aplicación trae integrada **Swagger**, una página web muy amigable y visual
    - Ahora, si había campos para rellenar, se habilitarán. Para empezar, solo haz clic abajito en el gran botón azul **"Execute"** (Ejecutar).
    - Desplázate un poco más abajo hasta la sección negra **"Server response"** (Respuesta del servidor). Ahí verás los datos solicitados mostrados si todo fue bien (Código 200).
 
-### 6. ¿Cómo Desplegar/Publicar localmente?
+### 5. ¿Cómo publico los pasos para el servidor final?
 
-Si ya probaste que todo funciona y deseas subir esta API a tu servidor o instalarlo en el IIS de tu propia máquina (Localhost completo):
+Dado que probaremos todo **solamente a nivel de aplicación local**, no necesitas instalar *IIS*, *WAMP* ni ninguna herramienta de servidor en tu PC. El comando `dotnet run` (que usamos en el paso 3) empaqueta su propio mini-servidor.
 
-1. **Prepara los archivos finales**: 
-   Abre una nueva ventana de PowerShell y ve a la ruta de tu API (`cd d:\@Edgar\Fuentes\WebVentas\WebVentas.Core\WebVentas.Core.API`).
-2. Escribe el comando que compilará y empaquetará el código para que sea rápido y productivo:
-   ```powershell
-   dotnet publish -c Release -o C:\DespliegueLocal\WebVentasAPI
-   ```
-   *(Este comando agarra todo el código útil y lo lanza optimizado a la ruta que le digas en la `-o`, en ese ejemplo `C:\DespliegueLocal\WebVentasAPI`)*.
-3. **Instala el sistema en tu PC (IIS)**:
-   - Presiona Windows, busca "Administrador de Internet Information Services (IIS)".
-   - En el panel izquierdo, despliega tu PC -> Sitios -> Clic derecho en "Default Web Site" -> "Agregar aplicación...".
-   - Ponle un alias como `WebVentasAPI`.
-   - En **Ruta de acceso física**, dale al botón `...` y busca la carpeta que creaste en el paso anterior (`C:\DespliegueLocal\WebVentasAPI`).
-   - Acepta todo. Ahora la API estará viva a nivel de usuario en tu red y equipo yendo a `http://localhost/WebVentasAPI/swagger`.
+Cualquier prueba de conexión, integración o lectura debe ser validada directamente desde esa ventana azul de **PowerShell** en tu entorno, verificando la consola y las respuestas de Swagger.

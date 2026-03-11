@@ -18,9 +18,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Configuracion EF Core en memoria para PoC
+// Configuracion EF Core
+var connectionString = builder.Configuration.GetConnectionString("WebVentas.Core") ?? throw new InvalidOperationException("Connection string 'WebVentas.Core' not found.");
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseInMemoryDatabase("WebVentasPoCDb"));
+    options.UseSqlServer(connectionString));
 
 // Dependencias de Infraestructura (Persistencia y Servicios Externos)
 builder.Services.AddScoped<IDocumentoRepository, DocumentoRepository>();

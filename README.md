@@ -175,20 +175,14 @@ Para ejecutar esta nueva aplicación (API REST):
    dotnet build
    ```
 
-4. **Aplicar Migraciones (Entity Framework)**:
-   Si existen cambios en la base de datos o es tu primera ejecución, aplica las migraciones desde la raíz de `WebVentas.Core`:
-   ```bash
-   dotnet ef database update --project WebVentas.Core.Infrastructure --startup-project WebVentas.Core.API
-   ```
-
-5. **Ejecutar la API**:
+4. **Ejecutar la API**:
    Navega al proyecto responsable de recibir peticiones (API) y arranca la aplicación:
    ```bash
    cd WebVentas.Core.API
    dotnet run
    ```
 
-6. **Probar la Aplicación**:
+5. **Probar la Aplicación**:
    Una vez iniciado, visita la URL indicada en la consola (usualmente `http://localhost:5000/swagger` o `https://localhost:5001/swagger`) para acceder a la interfaz Swagger, donde podrás explorar y testear los nuevos endpoints.
 
 Para más detalles sobre la estructura de la nueva arquitectura, consulta el [README de WebVentas.Core](WebVentas.Core/README.md).
